@@ -5,15 +5,15 @@ A C project that takes input of marks and number of students and give average sc
 
 concepts used:-
 C:-
-1D array
-If statements
-For loops
-functions
-operations
+- 1D array
+- If statements
+- For loops
+- functions
+- operations
 
 Maths:-
-Mean
-Maximim
-Minimum
+- Mean
+- Maximim
+- Minimum
 
 
