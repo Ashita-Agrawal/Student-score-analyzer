@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+// Function to calculate average marks
+float calculateAverage(int marks[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += marks[i];
+    }
+    return (float)sum / n;
+}
+
+// Function to find highest marks
+int findHighest(int marks[], int n) {
+    int max = marks[0];
+    for (int i = 1; i < n; i++) {
+        if (marks[i] > max) {
+            max = marks[i];
+        }
+    }
+    return max;
+}
+
+// Function to find lowest marks
+int findLowest(int marks[], int n) {
+    int min = marks[0];
+    for (int i = 1; i < n; i++) {
+        if (marks[i] < min) {
+            min = marks[i];
+        }
+    }
+    return min;
+}
+
+int main() {
+    int n;
+
+    // Input number of students
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    int marks[n];
+
+    // Input marks for each student
+    printf("Enter marks of %d students:", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &marks[i]);
+    }
+
+    // Calculate and display average, highest and lowest marks
+    float avg = calculateAverage(marks, n);
+    int highest = findHighest(marks, n);
+    int lowest = findLowest(marks, n);
+
+    printf("Average marks = %.2f", avg);
+    printf("Highest marks = %d", highest);
+    printf("Lowest marks = %d", lowest);
+
+    return 0;
+}
